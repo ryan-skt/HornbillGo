@@ -90,7 +90,7 @@ html, body {
     
 }
 .beach-card{
-    background-image: url(/Photos/Beach.png);
+    background-image: url(/Photos/topCover.jpg);
     width: 100%;
     height: 21rem;
     object-fit: cover;

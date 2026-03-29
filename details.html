@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/Photos/Logo.png">
-    <title>ExploreMore</title>
+    <link rel="icon" href="/Photos/favicon.jpg" type="image/png">
+    <title>HornbillGo | Destination Details</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="details.css">
-  </head>
-  <body>
-    <div class="mian">
+</head>
+<body>
+    <div class="main">
         <h1 style="text-align: center; margin-top: 1rem;">Your Destination</h1>
+        
         <div class="dest-section">
             <div class="dest-img">
                 <img id="destination-img" alt="Destination"/>
@@ -23,394 +24,160 @@
                     <p id="destination-rating"></p>
                 </div>
 
-                <div class="budget-freindly-card">
+                <div class="budget-friendly-card">
                     <div class="icons">
                       <span class="icon-money">💰</span>
-                      <!-- <span class="icon-info">i</span> -->
                     </div>
                     <p>Very budget friendly</p>
                 </div> 
             </div>
-                         
         </div>
+
         <div class="weather-container">
-          <div class="weather-header">
-              <h2 id="destination-name"></h2>
-              <div class="best-time">
-                  <span>🏆</span>
-                  Best time to visit <b>October - March</b>
-              </div>
-          </div>
-          <div class="month-grid">
-              <!-- Month cards -->
-              <div class="month-card">
-                  <h3>Jan</h3>
-                  <img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun">
-                  <p>10/30°C</p>
-                  <span class="aqi red">AQI 319</span>
-              </div>
-              <div class="month-card">
-                  <h3>Feb</h3>
-                  <img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun">
-                  <p>13/34°C</p>
-                  <span class="aqi red">AQI 176</span>
-              </div>
-              <div class="month-card">
-                  <h3>Mar</h3>
-                  <img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun">
-                  <p>18/36°C</p>
-                  <span class="aqi orange">AQI 103</span>
-              </div>
-              <div class="month-card">
-                  <h3>Apr</h3>
-                  <img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun">
-                  <p>21/43°C</p>
-                  <span class="aqi yellow">AQI 93</span>
-              </div>
-              <div class="month-card">
-                  <h3>May</h3>
-                  <img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun">
-                  <p>23/39°C</p>
-                  <span class="aqi yellow">AQI 64</span>
-              </div>
-              <div class="month-card">
-                  <h3>Jun</h3>
-                  <img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun">
-                  <p>25/40°C</p>
-                  <span class="aqi green">AQI 59</span>
-              </div>
-              <div class="month-card">
-                  <h3>Jul</h3>
-                  <img src="https://img.icons8.com/?size=100&id=19541&format=png&color=000000" alt="Rain">
-                  <p>25/40°C</p>
-                  <span class="aqi green">AQI 34</span>
-              </div>
-              <div class="month-card">
-                  <h3>Aug</h3>
-                  <img src="https://img.icons8.com/?size=100&id=19541&format=png&color=000000" alt="Rain">
-                  <p>25/34°C</p>
-                  <span class="aqi yellow">AQI 71</span>
-              </div>
-              <div class="month-card">
-                  <h3>Sep</h3>
-                  <img src="https://img.icons8.com/?size=100&id=19541&format=png&color=000000" alt="Rain">
-                  <p>24/34°C</p>
-                  <span class="aqi yellow">AQI 51</span>
-              </div>
-              <div class="month-card">
-                  <h3>Oct</h3>
-                  <img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun">
-                  <p>19/34°C</p>
-                  <span class="aqi orange">AQI 108</span>
-              </div>
-              <div class="month-card">
-                  <h3>Nov</h3>
-                  <img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun">
-                  <p>16/32°C</p>
-                  <span class="aqi purple">AQI 238</span>
-              </div>
-              <div class="month-card">
-                  <h3>Dec</h3>
-                  <img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun">
-                  <p>19/30°C</p>
-                  <span class="aqi purple">AQI 243</span>
-              </div>
-          </div>
-      </div>
-
-      <div class="places-to-eat">
-        <h2 style="text-align: start;">Places to eat</h2>
-        <div class="card-container">
-          <div class="card">
-            <img src="https://media.istockphoto.com/id/1163284610/photo/very-stylish-indian-gourmet-restaurant.jpg?s=612x612&w=0&k=20&c=-0Bz0mNjnrDoXApfo6P_xBrKmIMPZYJwQ5zAGEpzThI=" alt="Restaurant">
-            <div class="card-info">
-              <span class="rating">⭐ 4.6</span>
-              <h3>The Spice Junctiont</h3>
+            <div class="weather-header">
+                <h2 id="weather-city-name"></h2>
+                <div class="best-time">
+                    <span>🏆</span>
+                    Best time to visit <b>October - March</b>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <img src="https://media.istockphoto.com/id/1248298343/photo/3d-rendering-of-a-luxury-restaurant-interior-at-night.jpg?s=612x612&w=0&k=20&c=HATLl-O0gMhEEFP5gOA48YrCiFAw5J4gMD69I7WIhlg=" alt="Restaurant">
-            <div class="card-info">
-              <span class="rating">⭐ 4.5</span>
-              <h3>Crimson Plate</h3>
+            <div class="month-grid">
+                <div class="month-card"><h3>Jan</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>10/30°C</p><span class="aqi red">AQI 319</span></div>
+                <div class="month-card"><h3>Feb</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>13/34°C</p><span class="aqi red">AQI 176</span></div>
+                <div class="month-card"><h3>Mar</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>18/36°C</p><span class="aqi orange">AQI 103</span></div>
+                <div class="month-card"><h3>Apr</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>21/43°C</p><span class="aqi yellow">AQI 93</span></div>
+                <div class="month-card"><h3>May</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>23/39°C</p><span class="aqi yellow">AQI 64</span></div>
+                <div class="month-card"><h3>Jun</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>25/40°C</p><span class="aqi green">AQI 59</span></div>
+                <div class="month-card"><h3>Jul</h3><img src="https://img.icons8.com/?size=100&id=19541&format=png&color=000000" alt="Rain"><p>25/40°C</p><span class="aqi green">AQI 34</span></div>
+                <div class="month-card"><h3>Aug</h3><img src="https://img.icons8.com/?size=100&id=19541&format=png&color=000000" alt="Rain"><p>25/34°C</p><span class="aqi yellow">AQI 71</span></div>
+                <div class="month-card"><h3>Sep</h3><img src="https://img.icons8.com/?size=100&id=19541&format=png&color=000000" alt="Rain"><p>24/34°C</p><span class="aqi yellow">AQI 51</span></div>
+                <div class="month-card"><h3>Oct</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>19/34°C</p><span class="aqi orange">AQI 108</span></div>
+                <div class="month-card"><h3>Nov</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>16/32°C</p><span class="aqi purple">AQI 238</span></div>
+                <div class="month-card"><h3>Dec</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>19/30°C</p><span class="aqi purple">AQI 243</span></div>
             </div>
-          </div>
-          <div class="card">
-            <img src="https://media.istockphoto.com/id/92222813/photo/interior-view-of-an-empty-restaurant.jpg?s=612x612&w=0&k=20&c=Dx_9TAwDfykyyxDbHEm90Z47rXiz2wWij6IJGOLN2Ec=" alt="Restaurant">
-            <div class="card-info">
-              <span class="rating">⭐ 4.4</span>
-              <h3>Rustic Bites Cafe</h3>
-            </div>
-          </div>
-          <div class="card">
-            <img src="https://media.istockphoto.com/id/1075337052/photo/luxury-five-stars-hotel-restaurant.jpg?s=612x612&w=0&k=20&c=3Zl2rHkChxyBFMB4wWcg-91S4wItPtcUaYMzJ7OKsM0=" alt="Fairy Queen Cafe & Restaurant">
-            <div class="card-info">
-              <span class="rating">⭐ 4.4</span>
-              <h3>Bikanervala</h3>
-            </div>
-          </div>
-          <div class="card">
-            <img src="https://media.istockphoto.com/id/1001851616/photo/abstract-blur-image-of-night-festival-in-a-restaurant-and-the-atmosphere-is-happy-and-relaxing.jpg?s=612x612&w=0&k=20&c=vRDFQeAsuHBDPBiehamNwsu4mke88lZXJfqfah0k8Jk=" alt="Fairy Queen Cafe & Restaurant">
-            <div class="card-info">
-              <span class="rating">⭐ 4.4</span>
-              <h3>Flavorscape Diner</h3>
-            </div>
-          </div>
         </div>
-      </div>
-      
-      <div class="hotel-container">
-        <h2 style="text-align: start;">Hotels For You</h2>
-        <div class="card-container">
-          <div class="card2">
-            <img src="https://media.istockphoto.com/id/146765403/photo/a-luxurious-florida-beach-hotel-during-sunrise.jpg?s=612x612&w=0&k=20&c=pxw9Q78KbvqV6_pS_C-v_m6S_WQjKWLBSdqgRtqMUUg=" alt="Hotel Image">
-            <div class="card-info2">
-              <span class="rating2">7.6 Very Good</span>
-              <h3>Azure Haven Suites</h3>
-              <p>• 2.5 km from City Center</p>
-              <p>$99/night</p>
-            </div>
-          </div>
-          <div class="card2">
-            <img src="https://media.istockphoto.com/id/1691914584/photo/modern-bedroom-interior-with-dressing-table-bed-with-bedhead-and-side-table-with-photo-frame.jpg?s=612x612&w=0&k=20&c=aWa-bm-5QtZk4x1D2PiVUGXKEa89F_nBlLDP26lqiLk=" alt="Hotel Image">
-            <div class="card-info2">
-              <span class="rating2">8.3 Excellent</span>
-              <h3>Starlight Inn</h3>
-              <p>• 3.6 km from City Center</p>
-              <p>$49/night</p>
-            </div>
-          </div>
-          <div class="card2">
-            <img src="https://media.istockphoto.com/id/1051207584/photo/beautiful-golden-hour-and-himalayan-ranges-seen-from-hotel-room.jpg?s=612x612&w=0&k=20&c=2JhnZ2UhQTVEQx_WUzZpESbRJNjGU5GeuvayVxh63PU=" alt="Hotel Image">
-            <div class="card-info2">
-              <span class="rating2">7.5 Very Good</span>
-              <h3>The Pearl Retreat</h3>
-              <p>• 3.7 km from Railway station</p>
-              <p>$59/night</p>
-            </div>
-          </div>
-          <div class="card2">
-            <img src="https://media.istockphoto.com/id/2151855814/photo/receptionist-at-airport-lounge-hotel-lobby-checks-in-travelling-business-executives.jpg?s=612x612&w=0&k=20&c=RFAaS-np57nPdWFd2YkHT0keQxvOlXvmZ4kEeuZ1D8g=" alt="Hotel Image">
-            <div class="card-info2">
-              <span class="rating2">7.3 Very Good</span>
-              <h3>Grand Horizon Palace</h3>
-              <p>• 4.0 km from City Center</p>
-              <p>$89</p>
-            </div>
-          </div>
-    
-          <div class="card2">
-            <img src="https://media.istockphoto.com/id/119926339/photo/resort-swimming-pool.jpg?s=612x612&w=0&k=20&c=9QtwJC2boq3GFHaeDsKytF4-CavYKQuy1jBD2IRfYKc=" alt="Hotel Image">
-            <div class="card-info2">
-              <span class="rating2">7.3 Very Good</span>
-              <h3>Evergreen Residency</h3>
-              <p>• 4.0 km from Airport</p>
-              <p>$49</p>
-            </div>
-          </div>
-    
-        </div>
-      </div>
 
-      <div class="booking-container">
-        <div class="booking-header"><h2 id="destination-name"></h2></div>
+        <section class="info-section">
+            <h2 class="section-title">Local Flavors & Eateries</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="rating-badge">⭐ 4.8</div>
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Authentic Naga Thali">
+                    <div class="card-info">
+                        <h3>The Tribal Kitchen</h3>
+                        <p>Authentic Smoked Pork & Bamboo Shoot</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="rating-badge">⭐ 4.6</div>
+                    <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=600&q=80" alt="Assamese Thali">
+                    <div class="card-info">
+                        <h3>Heritage Assam Bistro</h3>
+                        <p>Traditional Parampara Thali</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="rating-badge">⭐ 4.7</div>
+<img src="https://images.pexels.com/photos/955137/pexels-photo-955137.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Himalayan Momo">                    <div class="card-info">
+                        <h3>Cloud 9 Cafe</h3>
+                        <p>Best Dumplings & Himalayan Tea</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="rating-badge">⭐ 4.5</div>
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Organic Salad">
+                    <div class="card-info">
+                        <h3>Ziro Organic Hub</h3>
+                        <p>Farm-to-table Fresh Greens</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <!-- Tab Navigation -->
-        <div class="tab-header">
-          <div class="tab active" data-category="flights">
-            <img src="/Photos/Plane.png" alt="Flights">
-            <p>Flights</p>
-          </div>
-          <div class="tab" data-category="hotels">
-            <img src="Photos/Hotels.png" alt="Hotels">
-            <p>Hotels</p>
-          </div>
-          <div class="tab" data-category="trains">
-            <img src="Photos/Train.png" alt="Trains">
-            <p>Trains</p>
-          </div>
-          <div class="tab" data-category="buses">
-            <img src="/Photos/Bus.png" alt="Buses">
-            <p>Buses</p>
-          </div>
-          <div class="tab" data-category="cars">
-            <img src="/Photos/Car2.png" alt="Cars">
-            <p>Cars</p>
-          </div>
-        </div>
-    
-        <!-- Flights Form -->
-        <div class="form-container active" data-category="flights">
-          <div class="form-group">
-            <label for="flight-from">From</label>
-            <input type="text" id="flight-from" placeholder="Enter departure city">
-          </div>
-          <div class="form-group">
-            <label for="flight-to">To</label>
-            <input type="text" id="flight-to" placeholder="Enter destination city">
-          </div>
-          <div class="form-group">
-            <label for="departure-date">Departure</label>
-            <input type="date" id="departure-date">
-          </div>
-          <div class="form-group">
-            <label for="travellers-class">Travellers & Class</label>
-            <select id="travellers-class">
-              <option>1 Traveller, Economy</option>
-              <option>2 Travellers, Business</option>
-            </select>
-          </div>
-          <button class="btn-search">Search</button>
-        </div>
-    
-        <!-- Hotels Form -->
-        <div class="form-container" data-category="hotels">
-          <div class="form-group">
-            <label for="hotel-destination">Destination</label>
-            <input type="text" id="hotel-destination" placeholder="Enter city or hotel name">
-          </div>
-          <div class="form-group">
-            <label for="check-in-date">Check-in</label>
-            <input type="date" id="check-in-date">
-          </div>
-          <div class="form-group">
-            <label for="check-out-date">Check-out</label>
-            <input type="date" id="check-out-date">
-          </div>
-          <div class="form-group">
-            <label for="rooms-guests">Rooms & Guests</label>
-            <select id="rooms-guests">
-              <option>1 Room, 2 Guests</option>
-              <option>2 Rooms, 4 Guests</option>
-            </select>
-          </div>
-          <button class="btn-search">Search</button>
-        </div>
-    
-        <!-- Trains Form -->
-        <div class="form-container" data-category="trains">
-          <div class="form-group">
-            <label for="train-from">From</label>
-            <input type="text" id="train-from" placeholder="Enter departure station">
-          </div>
-          <div class="form-group">
-            <label for="train-to">To</label>
-            <input type="text" id="train-to" placeholder="Enter destination station">
-          </div>
-          <div class="form-group">
-            <label for="train-date">Travel Date</label>
-            <input type="date" id="train-date">
-          </div>
-          <button class="btn-search">Search</button>
-        </div>
-    
-        <!-- Buses Form -->
-        <div class="form-container" data-category="buses">
-          <div class="form-group">
-            <label for="bus-from">From</label>
-            <input type="text" id="bus-from" placeholder="Enter departure city">
-          </div>
-          <div class="form-group">
-            <label for="bus-to">To</label>
-            <input type="text" id="bus-to" placeholder="Enter destination city">
-          </div>
-          <div class="form-group">
-            <label for="bus-date">Travel Date</label>
-            <input type="date" id="bus-date">
-          </div>
-          <button class="btn-search">Search</button>
-        </div>
-    
-        <!-- Cars Form -->
-        <div class="form-container" data-category="cars">
-          <div class="form-group">
-            <label for="car-pickup-location">Pickup Location</label>
-            <input type="text" id="car-pickup-location" placeholder="Enter pickup location">
-          </div>
-          <div class="form-group">
-            <label for="car-dropoff-location">Dropoff Location</label>
-            <input type="text" id="car-dropoff-location" placeholder="Enter dropoff location">
-          </div>
-          <div class="form-group">
-            <label for="car-pickup-date">Pickup Date</label>
-            <input type="date" id="car-pickup-date">
-          </div>
-          <div class="form-group">
-            <label for="car-dropoff-date">Dropoff Date</label>
-            <input type="date" id="car-dropoff-date">
-          </div>
-          <button class="btn-search">Search</button>
-        </div>
-      </div>
+        <section class="info-section">
+            <h2 class="section-title">Stay in Comfort</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="rating-badge">8.9 Excellent</div>
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Luxury Resort">
+                    <div class="card-info">
+                        <h3>The Orchid Retreat</h3>
+                        <p>• 1.2 km from City Center</p>
+                        <p class="price">₹5,500/night</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="rating-badge">8.2 Very Good</div>
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80" alt="Boutique Hotel">
+                    <div class="card-info">
+                        <h3>Misty Mountains Inn</h3>
+                        <p>• 3.0 km from Viewpoint</p>
+                        <p class="price">₹3,200/night</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="rating-badge">9.1 Superb</div>
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Eco Lodge">
+                    <div class="card-info">
+                        <h3>Dzukou Eco Lodge</h3>
+                        <p>• Near Valley Entrance</p>
+                        <p class="price">₹2,800/night</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <footer>  
-        <div class="footer-container">  
-            <div class="footer-about">
-                <div style="margin-left: 0; cursor: pointer; color: #318CE7; font-size: 1.5rem; font-family: cursive; font-weight: 900;" class="logo">ExploreMore</div>
-                <div class="adress"> 
-                    <p>Knowledge Park 2,<br> Greater Noida,<br>Uttar Pradesh, India</p>
-                </div>  
-                  
-                <div class="social-icons">  
-                    <i class="fa-brands fa-facebook"></i>  
-                    <i class="fa-brands fa-instagram"></i>  
-                    <i class="fa-brands fa-twitter"></i> 
-                    <i class="fa-brands fa-youtube"></i> 
-                </div>  
-            </div>  
+        <div class="booking-container">
+            <div class="booking-header"><h2 id="booking-dest-name"></h2></div>
             
-            <div class="footer-links">  
-                <h3>About</h3>  
-                <ul>  
-                    <li><a href="#">About us</a></li>  
-                    <li><a href="#">Features</a></li>  
-                    <li><a href="#">News</a></li>  
-                    <li><a href="#">Plans</a></li>  
-                </ul>  
-            </div>  
+            <div class="tab-header">
+                <div class="tab active" data-category="flights"><img src="/Photos/Plane.png" alt="Flights"><p>Flights</p></div>
+                <div class="tab" data-category="hotels"><img src="Photos/Hotels.png" alt="Hotels"><p>Hotels</p></div>
+                <div class="tab" data-category="trains"><img src="Photos/Train.png" alt="Trains"><p>Trains</p></div>
+                <div class="tab" data-category="buses"><img src="/Photos/Bus.png" alt="Buses"><p>Buses</p></div>
+                <div class="tab" data-category="cars"><img src="/Photos/Car2.png" alt="Cars"><p>Cars</p></div>
+            </div>
     
-            <div class="footer-links">  
-                <h3>Company</h3>  
-                <ul>  
-                    <li><a href="#">Why ExploreMore</a></li>  
-                    <li><a href="#">Partner with us</a></li>  
-                    <li><a href="#">FAQ</a></li>  
-                    <li><a href="#">Blog</a></li>  
-                </ul>  
-            </div>  
-    
-            <div class="footer-links">  
-                <h3>Support</h3>  
-                <ul>  
-                    <li><a href="#">Account</a></li>  
-                    <li><a href="#">Support center</a></li>  
-                    <li><a href="#">Feedback</a></li>  
-                    <li><a href="#">Contact us</a></li>  
-                </ul>  
-            </div>  
-    
-            <div class="footer-newsletter">  
-                <h3>Newsletter</h3>  
-                <p>Subscribe to our newsletter and get exciting offers</p>
-                <div class="enter-mail">
-                    <input type="email" placeholder="Enter your email address">  
-                    <i class="fa-solid fa-paper-plane"></i>
+            <div class="form-container active" data-category="flights">
+                <div class="form-group"><label>From</label><input type="text" placeholder="Departure city"></div>
+                <div class="form-group"><label>To</label><input type="text" placeholder="Destination city"></div>
+                <div class="form-group"><label>Departure</label><input type="date"></div>
+                <button class="btn-search">Search</button>
+            </div>
+            </div>
+
+        <footer>  
+            <div class="footer-container">  
+                <div class="footer-about">
+                    <div class="logo" style="color: #318CE7; font-size: 1.5rem; font-family: cursive; font-weight: 900;">HornbillGo</div>
+                    <div class="adress"><p>Singrijan, Dimapur,<br>Nagaland, India</p></div>  
+                    <div class="social-icons">  
+                        <i class="fa-brands fa-facebook"></i>  
+                        <i class="fa-brands fa-instagram"></i>  
+                        <i class="fa-brands fa-twitter"></i> 
+                        <i class="fa-brands fa-youtube"></i> 
+                    </div>  
                 </div>  
-                
-        </div> 
-    </footer>
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <ul><li><a href="#">About Us</a></li><li><a href="#">FAQ</a></li><li><a href="#">Contact</a></li></ul>
+                </div>
+                <div class="footer-newsletter">  
+                    <h3>Newsletter</h3>  
+                    <p>Subscribe for exciting offers</p>
+                    <div class="enter-mail">
+                        <input type="email" placeholder="Email address">  
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>  
+                </div> 
+            </div> 
+        </footer>
 
         <div class="copyright-container">
-            <div class="f-line">
-                <div class="line"></div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 ExploreMore. All rights reserved.</p>
-            </div>
+            <div class="copyright"><p>&copy; 2026 HornbillGo. All rights reserved.</p></div>
         </div>
-
     </div>
     
     <script src="details.js"></script>
-  </body>
+</body>
 </html>
