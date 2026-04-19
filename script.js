@@ -26,34 +26,34 @@ const tabs = document.querySelectorAll('.tab');
 
 const places = [
   {
-    title: "Dawki River",
-    location: "Meghalaya, India",
-    imgSrc: "/Photos/dawki.png",
-    description: "Visit Dawki River and enjoy the serene beauty with a 25% discount!",
-  },
-  {
     title: "Tawang",
-    location: "Arunchal Pradesh, India",
-    imgSrc: "/Photos/arunachal.jpg",
-    description: "Explore the beauty of Tawang in Arunchal Pradesh.",
+    location: "Arunachal Pradesh, India",
+    imgSrc: "/Photos/tawang.jpg",
+    description: "Visit the majestic Tawang Monastery and serene alpine meadows high in the Himalayas.",
   },
   {
-    title: "Dzoku Valley",
+    title: "Dawki",
+    location: "Meghalaya, India",
+    imgSrc: "/Photos/dawki-river.jpg",
+    description: "Drift on the crystal-clear Umngot River — so transparent you can see the riverbed below.",
+  },
+  {
+    title: "Dzukou Valley",
     location: "Nagaland, India",
-    imgSrc: "/Photos/nagaland.jpg",
-    description: "Discover the natural beauty of Dzoku Valley.",
+    imgSrc: "/Photos/dzukou-valley.jpg",
+    description: "Trek through Nagaland's Valley of Flowers, carpeted in lilies and seasonal blooms.",
   },
   {
-    title: "Tripura Sundari Temple",
-    location: "Tripura, India",
-    imgSrc: "/Photos/tripura.jpg",
-    description: "Experience the spiritual beauty of Tripura Sundari Temple.",
+    title: "Kaziranga",
+    location: "Assam, India",
+    imgSrc: "/Photos/kaziranga.jpg",
+    description: "Home to the world's largest population of Indian one-horned rhinoceroses.",
   },
   {
     title: "Loktak Lake",
     location: "Manipur, India",
-    imgSrc: "/Photos/manipur.jpg",
-    description: "Visit the beautiful Loktak Lake.",
+    imgSrc: "/Photos/loktak-lake.jpg",
+    description: "Float over the world's only floating national park on the phumdis of Loktak.",
   },
 ];
 
@@ -92,7 +92,8 @@ places.forEach((place) => {
   title.textContent = place.title;
 
   const locationInfo = document.createElement("p");
-  locationInfo.innerHTML = `<i class="fa-solid fa-location-dot"></i> ${place.location}`;
+  const pinSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:.85rem;height:.85rem;vertical-align:middle;margin-right:.25rem;color:#318CE7"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>`;
+  locationInfo.innerHTML = `${pinSVG} ${place.location}`;
 
   cardInfo.appendChild(title);
   cardInfo.appendChild(locationInfo);
@@ -106,7 +107,19 @@ places.forEach((place) => {
 
   const description = document.createElement("p");
   description.textContent = place.description;
+
+  const exploreLink = document.createElement("a");
+  const arrowSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:.85rem;height:.85rem;vertical-align:middle"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>`;
+  exploreLink.classList.add("explore-link");
+  exploreLink.innerHTML = `${arrowSVG} View Details`;
+  exploreLink.href = `details.html?name=${encodeURIComponent(place.title)}`;
+
+  const backTitle = document.createElement("h4");
+  backTitle.textContent = place.title;
+
+  cardBack.appendChild(backTitle);
   cardBack.appendChild(description);
+  cardBack.appendChild(exploreLink);
 
   // Append front and back to inner container
   cardInner.appendChild(cardFront);
@@ -127,240 +140,11 @@ exploreButton.addEventListener("click", () => {
   exploreSection.scrollIntoView({ behavior: "smooth" });
 });
 
-// About Me
-document.addEventListener("DOMContentLoaded", function () {
-  const closeButton = document.querySelector(".about .close-btn");
-  const menu = document.querySelector(".about");
-  const aboutButton = document.querySelector("#about-me .about-me-btn");
-
-  aboutButton.addEventListener("click", function () {
-    menu.style.top = "0%";
-    closeButton.style.display = "block"; // Show close button
-    aboutButton.style.display = "none"; // Hide menu button
-  });
-
-  closeButton.addEventListener("click", function () {
-    menu.style.top = "-100%";
-    closeButton.style.display = "none"; // Hide close button
-    aboutButton.style.display = "block"; // Show menu button
-  });
-});
-
-const destinations = [
-  {
-    name: "Tawang",
-    price: "₹12,000/Pax",
-    location: "📍 Arunachal Pradesh",
-    rating: "⭐ 4.9",
-    category: "mountains",
-    img: "/Photos/tawang.jpg"
-  },
-  {
-    name: "Ziro Valley",
-    price: "₹10,500/Pax",
-    location: "📍 Arunachal Pradesh",
-    rating: "⭐ 4.8",
-    category: "villages",
-    img: "/Photos/ziro-valley.jpg"
-  },
-  {
-    name: "Bomdila",
-    price: "₹9,500/Pax",
-    location: "📍 Arunachal Pradesh",
-    rating: "⭐ 4.7",
-    category: "mountains",
-    img: "/Photos/bomdila.jpg"
-  },
-  {
-    name: "Pasighat",
-    price: "₹8,800/Pax",
-    location: "📍 Arunachal Pradesh",
-    rating: "⭐ 4.6",
-    category: "nature",
-    img: "/Photos/pasighat.jpg"
-  },
-  {
-    name: "Majuli",
-    price: "₹9,000/Pax",
-    location: "📍 Assam",
-    rating: "⭐ 4.8",
-    category: "villages",
-    img: "/Photos/majuli.jpg"
-  },
-  {
-    name: "Kaziranga",
-    price: "₹11,500/Pax",
-    location: "📍 Assam",
-    rating: "⭐ 4.9",
-    category: "wildlife",
-    img: "/Photos/kaziranga.jpg"
-  },
-  {
-    name: "Manas National Park",
-    price: "₹10,800/Pax",
-    location: "📍 Assam",
-    rating: "⭐ 4.8",
-    category: "wildlife",
-    img: "/Photos/manas.jpg"
-  },
-  {
-    name: "Tezpur",
-    price: "₹8,500/Pax",
-    location: "📍 Assam",
-    rating: "⭐ 4.6",
-    category: "culture",
-    img: "/Photos/tezpur.jpg"
-  },
-  {
-    name: "Cherrapunji",
-    price: "₹10,000/Pax",
-    location: "📍 Meghalaya",
-    rating: "⭐ 4.9",
-    category: "waterfalls",
-    img: "/Photos/cherrapunji.jpg"
-  },
-  {
-    name: "Shillong",
-    price: "₹8,500/Pax",
-    location: "📍 Meghalaya",
-    rating: "⭐ 4.7",
-    category: "culture",
-    img: "/Photos/shillong.jpg"
-  },
-  {
-    name: "Dawki",
-    price: "₹9,500/Pax",
-    location: "📍 Meghalaya",
-    rating: "⭐ 4.8",
-    category: "waterfalls",
-    img: "/Photos/dawki-river.jpg"
-  },
-  {
-    name: "Mawlynnong",
-    price: "₹7,800/Pax",
-    location: "📍 Meghalaya",
-    rating: "⭐ 4.9",
-    category: "villages",
-    img: "/Photos/mawlynnong.jpg"
-  },
-  {
-    name: "Kohima",
-    price: "₹10,000/Pax",
-    location: "📍 Nagaland",
-    rating: "⭐ 4.8",
-    category: "culture",
-    img: "/Photos/kohima.jpg"
-  },
-  {
-    name: "Dimapur",
-    price: "₹9,000/Pax",
-    location: "📍 Nagaland",
-    rating: "⭐ 4.6",
-    category: "cities",
-    img: "/Photos/dimapur.jpg"
-  },
-  {
-    name: "Hornbill Festival",
-    price: "₹7,500/Pax",
-    location: "📍 Nagaland",
-    rating: "⭐ 5.0",
-    category: "culture",
-    img: "/Photos/hornbill.jpg"
-  },
-  {
-    name: "Dzukou Valley",
-    price: "₹9,800/Pax",
-    location: "📍 Nagaland",
-    rating: "⭐ 4.9",
-    category: "mountains",
-    img: "/Photos/dzukou-valley.jpg"
-  },
-  {
-    name: "Gangtok",
-    price: "₹11,000/Pax",
-    location: "📍 Sikkim",
-    rating: "⭐ 4.9",
-    category: "mountains",
-    img: "/Photos/gangtok.jpg"
-  },
-  {
-    name: "Tsomgo Lake",
-    price: "₹9,800/Pax",
-    location: "📍 Sikkim",
-    rating: "⭐ 4.9",
-    category: "mountains",
-    img: "/Photos/tsomgo.jpeg"
-  },
-  {
-    name: "Pelling",
-    price: "₹9,200/Pax",
-    location: "📍 Sikkim",
-    rating: "⭐ 4.8",
-    category: "mountains",
-    img: "/Photos/pelling.jpg"
-  },
-  {
-    name: "Yumthang Valley",
-    price: "₹10,500/Pax",
-    location: "📍 Sikkim",
-    rating: "⭐ 4.9",
-    category: "nature",
-    img: "/Photos/yumthang-valley.jpeg"
-  },
-  {
-    name: "Aizawl",
-    price: "₹9,200/Pax",
-    location: "📍 Mizoram",
-    rating: "⭐ 4.7",
-    category: "villages",
-    img: "/Photos/aizawl.jpg"
-  },
-  {
-    name: "Champhai",
-    price: "₹8,800/Pax",
-    location: "📍 Mizoram",
-    rating: "⭐ 4.6",
-    category: "nature",
-    img: "/Photos/champhai.jpg"
-  },
-  {
-    name: "Loktak Lake",
-    price: "₹10,500/Pax",
-    location: "📍 Manipur",
-    rating: "⭐ 4.9",
-    category: "nature",
-    img: "/Photos/loktak-lake.jpg"
-  },
-  {
-    name: "Imphal",
-    price: "₹9,000/Pax",
-    location: "📍 Manipur",
-    rating: "⭐ 4.7",
-    category: "cities",
-    img: "/Photos/imphal.jpg"
-  },
-  {
-    name: "Unakoti",
-    price: "₹8,500/Pax",
-    location: "📍 Tripura",
-    rating: "⭐ 4.8",
-    category: "spiritual",
-    img: "/Photos/unakoti.jpg"
-  },
-  {
-    name: "Agartala",
-    price: "₹8,200/Pax",
-    location: "📍 Tripura",
-    rating: "⭐ 4.6",
-    category: "cities",
-    img: "/Photos/agartala.jpg"
-  }
-];
 // Render cards dynamically
 const cardContainer = document.getElementById('data-destination');
 
 function renderCards(category = 'all') {
-  cardContainer.innerHTML = ''; // Clear existing cards
+  cardContainer.innerHTML = '';
 
   destinations
     .filter((dest) => category === 'all' || dest.category === category)
@@ -368,16 +152,19 @@ function renderCards(category = 'all') {
       const card = document.createElement('div');
       card.classList.add('card2');
       card.innerHTML = `
-        <img src="${dest.img}" alt="${dest.name}">
-        <h3>${dest.name}</h3>
-        <p>${dest.location}</p>
-        <p>${dest.price}</p>
-        <p>${dest.rating}</p>
+        <img src="${dest.img}" alt="${dest.name}" loading="lazy">
+        <div class="card2-body">
+          <span class="card2-category">${dest.category}</span>
+          <div class="card2-name">${dest.name}</div>
+          <div class="card2-location"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:.8rem;height:.8rem;vertical-align:middle;margin-right:.2rem"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> ${dest.location}</div>
+          <div class="card2-meta">
+            <span class="card2-price">${dest.price}</span>
+            <span class="card2-rating"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" style="width:.8rem;height:.8rem;vertical-align:middle;margin-right:.2rem"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> ${dest.rating}</span>
+          </div>
+        </div>
       `;
       card.addEventListener('click', () => {
-        window.location.href = `details.html?name=${encodeURIComponent(
-          dest.name
-        )}`;
+        window.location.href = `details.html?name=${encodeURIComponent(dest.name)}`;
       });
       cardContainer.appendChild(card);
     });
@@ -418,3 +205,12 @@ function toggleCards() {
 
 // Add event listener to the button
 showMoreButton.addEventListener('click', toggleCards);
+
+// Scroll reveal
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.popular-place, .mem-title, .memories, .explore-more, .quote-card, .booking-container').forEach(el => {
+  el.classList.add('reveal');
+  revealObserver.observe(el);
+});

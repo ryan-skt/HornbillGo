@@ -1,137 +1,127 @@
-# 🌏 HornbillGo – Authentic North East India Exploration
+# HornbillGo – Authentic North East India Exploration
 
-HornbillGo is a frontend travel platform focused on showcasing the beauty of **North East India**. It allows users to explore destinations, view detailed travel information, and interact with a modern, responsive interface designed for an engaging user experience.
-
----
-
-## 📌 Project Overview
-
-HornbillGo is a static frontend web application built using **HTML, CSS, and JavaScript**. The platform provides curated destination listings and dynamically renders detailed information such as pricing, ratings, weather conditions, AQI, and nearby amenities like restaurants and hotels.
-
-The project demonstrates strong fundamentals in UI design, DOM manipulation, and client-side routing using URL parameters.
+HornbillGo is a static frontend travel platform showcasing **26 destinations across North East India**. It lets users explore curated listings, view live weather, find local food and hotels, and interact with a modern responsive interface.
 
 ---
 
-## ✨ Features
+## Project Overview
 
-- 🏞️ **Explore Destinations**  
-  Browse multiple destinations across North East India via interactive cards.
-
-- 📄 **Dynamic Details Page**  
-  View destination-specific details using URL parameters (`details.html?name=...`).
-
-- 🔐 **Authentic UI**  
-  Clean and responsive login and signup pages (UI only).
-
-- 🧳 **Booking Section**  
-  Tab-based booking interface including:
-  - Flights
-  - Hotels
-  - Trains
-  - Buses
-  - Cars
-
-- 🌦️ **Weather Insights**  
-  Monthly weather data displayed for better travel planning.
-
-- 📊 **Additional Information**  
-  Includes:
-  - Price estimates
-  - Ratings
-  - Air Quality Index (AQI)
-  - Nearby restaurants and hotels
-
-- 📱 **Responsive Design**  
-  Fully responsive layout for mobile, tablet, and desktop devices.
+Built with plain **HTML, CSS, and Vanilla JavaScript** — no frameworks, no build step. The platform dynamically renders destination data from a shared `data.js` source and fetches real-time weather from [WeatherAPI.com](https://www.weatherapi.com).
 
 ---
 
-## 🛠️ Tech Stack
+## Features
 
-- **HTML5** – Structure and layout  
-- **CSS3** – Styling and responsiveness  
-- **JavaScript (Vanilla JS)** – Dynamic rendering and interactivity  
+### Explore Page (`index.html`)
+- 26 flip-card destination listings across 8 states
+- Category-based filtering (mountains, villages, wildlife, culture, waterfalls, nature, cities, spiritual)
+- Hero section with LCP-optimised preloaded cover image
+- Booking widget with tabs for Flights, Hotels, Trains, Buses, and Cars — "coming soon" toast on submit
+
+### Destination Details (`details.html`)
+- Fully dynamic — driven by `?name=` URL parameter
+- Live weather via WeatherAPI.com with monthly breakdown chart
+- Dynamic best time to visit pill per destination
+- Destination-category-specific food and hotel recommendation cards
+- AQI display, price estimate, and star rating
+- Booking widget with "coming soon" toast
+
+### Authentication
+| Page | Features |
+|------|----------|
+| `login.html` | Password show/hide toggle, inline error messages, remember me checkbox |
+| `signup.html` | Password strength meter, show/hide for both password fields, inline validation errors, no `alert()` for errors |
+
+### Technical
+- **Shared data source** — `data.js` is the single source of truth for all 26 destinations; loaded before both `script.js` and `details.js`
+- **No Font Awesome dependency** — all icons are inline SVGs
+- **iOS Safari fix** — `background-attachment: fixed` falls back to `scroll` on iOS via `@supports`
+- **Accessibility** — decorative SVGs have `aria-hidden="true"`, toast uses `aria-live="polite"`
 
 ---
 
-## 📁 Folder Structure
+## Destinations (26)
+
+| State | Destinations |
+|-------|-------------|
+| Arunachal Pradesh | Tawang, Ziro Valley, Bomdila, Pasighat |
+| Assam | Majuli, Kaziranga, Manas National Park, Tezpur |
+| Meghalaya | Cherrapunji, Shillong, Dawki, Mawlynnong |
+| Nagaland | Kohima, Dimapur, Hornbill Festival, Dzukou Valley |
+| Sikkim | Gangtok, Tsomgo Lake, Pelling, Yumthang Valley |
+| Mizoram | Aizawl, Champhai |
+| Manipur | Loktak Lake, Imphal |
+| Tripura | Unakoti, Agartala |
+
+---
+
+## Tech Stack
+
+- **HTML5** — structure and semantic markup
+- **CSS3** — custom properties, flexbox, grid, `@supports`
+- **JavaScript (ES6+)** — DOM manipulation, `URLSearchParams`, `fetch`
+- **WeatherAPI.com** — live weather data
+
+---
+
+## Folder Structure
+
+```
 HornbillGo/
+├── index.html       # Homepage — explore grid & booking widget
+├── details.html     # Dynamic destination details page
+├── login.html       # Login page
+├── signup.html      # Signup page
 │
-├── index.html # Homepage with destination cards
-├── details.html # Dynamic destination details page
-├── login.html # Login UI
-├── signup.html # Signup UI
+├── style.css        # Styles for index.html
+├── details.css      # Styles for details.html
 │
-├── css/
-│ └── styles.css # Main stylesheet
+├── script.js        # Homepage logic (filter, flip cards)
+├── details.js       # Details page logic (weather, cards, render)
+├── data.js          # Shared destinations data (single source of truth)
 │
-├── js/
-│ ├── script.js # Homepage logic
-│ ├── details.js # Dynamic rendering logic
-│ └── data.js # Destination data source
-│
-├── assets/
-│ ├── images/ # Destination and UI images
-│ └── icons/ # Icons and UI assets
-│
+├── Photos/          # Destination images and UI assets
 └── README.md
-
-
----
-
-## ⚙️ How It Works
-
-### 🔗 URL Parameters & Dynamic Rendering
-
-The `details.html` page dynamically loads destination data based on URL parameters.
-
-Example:
-
-details.html?name=Shillong
-
-
-### Workflow:
-1. User clicks on a destination card from `index.html`.
-2. The destination name is passed via the URL query string.
-3. JavaScript (`details.js`) extracts the parameter using `URLSearchParams`.
-4. Matching data is retrieved from a local dataset (`data.js`).
-5. Content is dynamically rendered onto the page using DOM manipulation.
+```
 
 ---
 
-## 🚀 Setup Instructions
+## Setup
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-ryan-skt/HornbillGo.git
-
-Navigate to the project folder
-
+```bash
+git clone https://github.com/ryan-skt/HornbillGo.git
 cd HornbillGo
-Open in browser
-Simply open index.html in your preferred browser
-(No server setup required)
-⚠️ Limitations
-No backend integration (static frontend only)
-Authentication is UI-based (no real user validation)
-Data is locally stored (no real-time API integration)
-Booking functionality is non-functional (UI demonstration only)
-🔮 Future Improvements::
-🔗 Integrate real APIs (weather, travel, maps)
-🧠 Add backend for authentication and booking
-💳 Enable real booking and payment features
-🌍 Expand destinations beyond North East India
-🔍 Add search and filtering functionality
-⭐ User reviews and ratings system
-👤 Author
+# Open index.html directly in a browser, or serve with any static server:
+python3 -m http.server 8080
+```
 
-Your Name
-Frontend Developer
+No installation or build step required.
 
-GitHub: https://github.com/ryan-skt
-LinkedIn: https://linkedin.com/in/ryansivakoti
+---
 
+## Limitations
 
-You are free to use and modify it with proper attribution.
+- No backend — authentication is UI-only with no real validation
+- WeatherAPI.com key is embedded in `details.js` (client-side only)
+- Booking functionality shows a "coming soon" toast; no real booking integration
 
-✨ HornbillGo aims to bring the unexplored beauty of North East India closer to travelers through a clean and interactive digital experience.
+---
+
+## Future Improvements
+
+- Backend for real authentication and user accounts
+- Live travel booking and payment integration
+- Search and filtering on the explore page
+- User reviews and ratings
+- Expand beyond North East India
+
+---
+
+## Author
+
+**Ryan Sivakoti** — Frontend Developer  
+GitHub: [ryan-skt](https://github.com/ryan-skt) | LinkedIn: [ryansivakoti](https://linkedin.com/in/ryansivakoti)
+
+---
+
+*HornbillGo aims to bring the unexplored beauty of North East India closer to travelers through a clean and interactive digital experience.*

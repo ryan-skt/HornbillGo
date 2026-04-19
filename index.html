@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="/Photos/favicon.jpg">
+    <link rel="preload" as="image" href="/Photos/topCover.jpg" fetchpriority="high">
     <title>HornbillGo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="gredient1"></div>
@@ -23,52 +24,10 @@
                 <li><a href="index.html" style="opacity: 1;">Home</a></li>
                 <li><a href="#explore-more">Explore</a></li>
                 <li><a href="#book-ticket">Ticket</a></li>
-                <li id="about-me"><a class="about-me-btn" href="#about-me">About</a></li>
             </ul>
         </div>
 
-        <div class="about">  
-            <i class="close-btn">×</i>
-            
-            <div class="about-section">
-                <div class="about-header">
-                    <h1>About HornbillGo</h1>
-                    <p>
-                    Welcome to <strong>HornbillGo</strong>, your ultimate trip-planning and
-                    booking companion! At HornbillGo, we believe that every journey has the
-                    power to inspire, educate, and create memories that last a lifetime.
-                    </p>
-                </div>
-                <div class="features">
-                  <div class="feature-card">
-                    <h3>Personalized Recommendations</h3>
-                    <p>
-                      Get tailored suggestions to get the most out of your travel experience to North East India.
-                    </p>
-                  </div>
-                  <div class="feature-card">
-                    <h3>Hassle-Free Planning</h3>
-                    <p>
-                      Compare destinations, find budget-friendly options, and book
-                      everything in one place.
-                    </p>
-                  </div>
-                  <div class="feature-card">
-                    <h3>Trusted Partners</h3>
-                    <p>
-                      Collaborations with reliable travel services and locals ensure a seamless authentic
-                      experience.
-                    </p>
-                  </div>
-                </div>
-          
-                <div class="call-to-action">
-                  <h2>Start Your Journey Today</h2>
-                  <button onclick="redirectToHome()">Explore More</button>
-                </div>
-              </div>
-          
-        </div> 
+
 
         <div class="login-sign">
             <ul>
@@ -79,12 +38,21 @@
     </div>
     <div class="main">
         <div class="beach-card">
-            <h1>Discover the North East <br> and their mesmerizing soul</h1>
-            <br>
-            <p style="font-size: 0.8rem; font-weight: 500;">Your all-in-one portal for Flights, Hotels, and Trains in Northeast India.</p>
-            <div class="aeroplane">
-                <img src="/Photos/Aeroplane.png" alt="" id="left">
-                <img src="/Photos/Aeroplane.png" alt="" id="right">
+            <div class="hero-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:.9rem;height:.9rem;vertical-align:middle"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13l-2 6 6-2-4-4zm1 4.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg> Explore Northeast India</div>
+            <h1>Discover the North East<br>and their mesmerizing soul</h1>
+            <p>Your all-in-one portal for Flights, Hotels, and Trains in Northeast India.</p>
+            <div class="hero-actions">
+                <a href="#explore-more" class="hero-btn-primary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:.9rem;height:.9rem;vertical-align:middle"><path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/></svg> Explore Destinations</a>
+                <a href="#book-ticket" class="hero-btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:.9rem;height:.9rem;vertical-align:middle"><path d="M22 10V6c0-1.11-.9-2-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-1.99 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-2-3.46V6h16v2.54z"/></svg> Book a Trip</a>
+            </div>
+            <div class="stats-bar">
+                <div class="stat-item"><span class="stat-number">30<span class="stat-plus">+</span></span><span class="stat-label">Destinations</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat-item"><span class="stat-number">8</span><span class="stat-label">States</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat-item"><span class="stat-number">50k<span class="stat-plus">+</span></span><span class="stat-label">Travelers</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat-item"><span class="stat-number">4.9<span class="stat-plus">★</span></span><span class="stat-label">Avg Rating</span></div>
             </div>
         </div>
 
@@ -224,8 +192,9 @@
         <div class="container">
             <div class="popular-heading">
                 <div class="head-child">
+                    <span class="section-pill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:.8rem;height:.8rem;vertical-align:middle"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> Featured</span>
                     <h1>Iconic Destinations</h1>
-                    <p style="font-size: 1rem;">Experience the mist, the mountains, and the magic.</p>
+                    <p>Experience the mist, the mountains, and the magic.</p>
                 </div>
                 <div class="head-child">
                     <p>From the crystal waters of Dawki to the living root bridges of Cherrapunji, Northeast India is a soulful escape where nature and heritage intertwine.</p>
@@ -239,6 +208,7 @@
     </div>
 
     <div class="mem-title">
+        <span class="section-pill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:.8rem;height:.8rem;vertical-align:middle"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> Why HornbillGo</span>
         <h2>Travel to make memories of a lifetime</h2>
         <p>Planning that fits the rugged terrain of the Northeast</p>
     </div>
@@ -292,7 +262,7 @@
                     <img src="/Photos/ryan.jpg" alt="Ryan Sivakoti">
                     <div class="profile-info">
                         <p>Ryan Sivakoti</p>
-                        <span>⭐ 4.9</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" style="width:.72rem;height:.72rem;vertical-align:middle;margin-right:.1rem"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>4.9</span>
                     </div>
                 </div>
             
@@ -300,7 +270,7 @@
                     <img src="/Photos/phurden.jpg" alt="Phurden Lepcha">
                     <div class="profile-info">
                         <p>Phurden Lepcha</p>
-                        <span>⭐ 4.8</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" style="width:.72rem;height:.72rem;vertical-align:middle;margin-right:.1rem"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>4.8</span>
                     </div>
                 </div>
          
@@ -308,7 +278,7 @@
                     <img src="/Photos/manaswi.jpg" alt="Caroline">
                     <div class="profile-info">
                         <p>Caroline</p>
-                        <span>⭐ 4.9</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f59e0b" style="width:.72rem;height:.72rem;vertical-align:middle;margin-right:.1rem"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>4.9</span>
                     </div>
                 </div>
             </div>
@@ -322,8 +292,9 @@
         <div class="explore-more-container">
             <div class="popular-heading">
                 <div class="head-child">
+                    <span class="section-pill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:.8rem;height:.8rem;vertical-align:middle"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg> All Places</span>
                     <h1>Explore more</h1>
-                    <p style="font-size: 1rem;">Let's go an adventure!</p>
+                    <p>Let's go on an adventure!</p>
                 </div>
                 <div class="head-child">
                     <p>Discover curated journeys across Northeast India—seamlessly book flights, stays, and local experiences in one place.</p>
@@ -360,11 +331,19 @@
                         <p>Singrijan,<br> Dimapur,<br>Nagaland, India</p>
                     </div>  
                       
-                    <div class="social-icons">  
-                        <i class="fa-brands fa-facebook"></i>  
-                        <i class="fa-brands fa-instagram"></i>  
-                        <i class="fa-brands fa-twitter"></i> 
-                        <i class="fa-brands fa-youtube"></i> 
+                    <div class="social-icons">
+                        <a href="#" class="social-icon-btn" aria-label="Facebook">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon-btn" aria-label="Instagram">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" class="social-icon-btn" aria-label="X (Twitter)">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.736-8.857L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon-btn" aria-label="YouTube">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
                     </div>  
                 </div>  
                 
@@ -402,8 +381,8 @@
                     <h3>Newsletter</h3>  
                     <p>Subscribe to our newsletter and get exciting offers</p>
                     <div class="enter-mail">
-                        <input type="email" placeholder="Enter your email address">  
-                        <i class="fa-solid fa-paper-plane"></i>
+                        <input type="email" placeholder="Enter your email address">
+                        <button type="button" class="newsletter-btn" aria-label="Subscribe"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:1rem;height:1rem"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
                     </div>  
                     
             </div> 
@@ -420,6 +399,20 @@
         
     </div>
 
+    <script src="data.js"></script>
     <script src="script.js"></script>
+    <script>
+      // Booking Search — "coming soon" toast
+      document.querySelectorAll('.btn-search').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const toast = document.getElementById('booking-toast');
+          if (!toast) return;
+          toast.removeAttribute('hidden');
+          clearTimeout(toast._t);
+          toast._t = setTimeout(() => toast.setAttribute('hidden', ''), 3000);
+        });
+      });
+    </script>
+    <div id="booking-toast" class="booking-toast" hidden role="status" aria-live="polite">Live booking engine launching soon — stay tuned!</div>
 </body>
 </html>

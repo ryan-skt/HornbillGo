@@ -1,183 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/Photos/favicon.jpg" type="image/png">
-    <title>HornbillGo | Destination Details</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="details.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/Photos/favicon.jpg" type="image/png">
+  <title>HornbillGo — Destination Details</title>
+  <link rel="stylesheet" href="details.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="main">
-        <h1 style="text-align: center; margin-top: 1rem;">Your Destination</h1>
-        
-        <div class="dest-section">
-            <div class="dest-img">
-                <img id="destination-img" alt="Destination"/>
-            </div>
-            <div class="dest-details">
-                <div class="dest-details-card">
-                    <h1 id="destination-name"></h1>
-                    <p id="destination-location"></p>
-                    <p id="destination-price"></p>
-                    <p id="destination-rating"></p>
-                </div>
 
-                <div class="budget-friendly-card">
-                    <div class="icons">
-                      <span class="icon-money">💰</span>
-                    </div>
-                    <p>Very budget friendly</p>
-                </div> 
-            </div>
-        </div>
-
-        <div class="weather-container">
-            <div class="weather-header">
-                <h2 id="weather-city-name"></h2>
-                <div class="best-time">
-                    <span>🏆</span>
-                    Best time to visit <b>October - March</b>
-                </div>
-            </div>
-            <div class="month-grid">
-                <div class="month-card"><h3>Jan</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>10/30°C</p><span class="aqi red">AQI 319</span></div>
-                <div class="month-card"><h3>Feb</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>13/34°C</p><span class="aqi red">AQI 176</span></div>
-                <div class="month-card"><h3>Mar</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>18/36°C</p><span class="aqi orange">AQI 103</span></div>
-                <div class="month-card"><h3>Apr</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>21/43°C</p><span class="aqi yellow">AQI 93</span></div>
-                <div class="month-card"><h3>May</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>23/39°C</p><span class="aqi yellow">AQI 64</span></div>
-                <div class="month-card"><h3>Jun</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>25/40°C</p><span class="aqi green">AQI 59</span></div>
-                <div class="month-card"><h3>Jul</h3><img src="https://img.icons8.com/?size=100&id=19541&format=png&color=000000" alt="Rain"><p>25/40°C</p><span class="aqi green">AQI 34</span></div>
-                <div class="month-card"><h3>Aug</h3><img src="https://img.icons8.com/?size=100&id=19541&format=png&color=000000" alt="Rain"><p>25/34°C</p><span class="aqi yellow">AQI 71</span></div>
-                <div class="month-card"><h3>Sep</h3><img src="https://img.icons8.com/?size=100&id=19541&format=png&color=000000" alt="Rain"><p>24/34°C</p><span class="aqi yellow">AQI 51</span></div>
-                <div class="month-card"><h3>Oct</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>19/34°C</p><span class="aqi orange">AQI 108</span></div>
-                <div class="month-card"><h3>Nov</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>16/32°C</p><span class="aqi purple">AQI 238</span></div>
-                <div class="month-card"><h3>Dec</h3><img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun"><p>19/30°C</p><span class="aqi purple">AQI 243</span></div>
-            </div>
-        </div>
-
-        <section class="info-section">
-            <h2 class="section-title">Local Flavors & Eateries</h2>
-            <div class="card-container">
-                <div class="card">
-                    <div class="rating-badge">⭐ 4.8</div>
-                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Authentic Naga Thali">
-                    <div class="card-info">
-                        <h3>The Tribal Kitchen</h3>
-                        <p>Authentic Smoked Pork & Bamboo Shoot</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="rating-badge">⭐ 4.6</div>
-                    <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=600&q=80" alt="Assamese Thali">
-                    <div class="card-info">
-                        <h3>Heritage Assam Bistro</h3>
-                        <p>Traditional Parampara Thali</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="rating-badge">⭐ 4.7</div>
-<img src="https://images.pexels.com/photos/955137/pexels-photo-955137.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Himalayan Momo">                    <div class="card-info">
-                        <h3>Cloud 9 Cafe</h3>
-                        <p>Best Dumplings & Himalayan Tea</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="rating-badge">⭐ 4.5</div>
-                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Organic Salad">
-                    <div class="card-info">
-                        <h3>Ziro Organic Hub</h3>
-                        <p>Farm-to-table Fresh Greens</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="info-section">
-            <h2 class="section-title">Stay in Comfort</h2>
-            <div class="card-container">
-                <div class="card">
-                    <div class="rating-badge">8.9 Excellent</div>
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Luxury Resort">
-                    <div class="card-info">
-                        <h3>The Orchid Retreat</h3>
-                        <p>• 1.2 km from City Center</p>
-                        <p class="price">₹5,500/night</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="rating-badge">8.2 Very Good</div>
-                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80" alt="Boutique Hotel">
-                    <div class="card-info">
-                        <h3>Misty Mountains Inn</h3>
-                        <p>• 3.0 km from Viewpoint</p>
-                        <p class="price">₹3,200/night</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="rating-badge">9.1 Superb</div>
-                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Eco Lodge">
-                    <div class="card-info">
-                        <h3>Dzukou Eco Lodge</h3>
-                        <p>• Near Valley Entrance</p>
-                        <p class="price">₹2,800/night</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="booking-container">
-            <div class="booking-header"><h2 id="booking-dest-name"></h2></div>
-            
-            <div class="tab-header">
-                <div class="tab active" data-category="flights"><img src="/Photos/Plane.png" alt="Flights"><p>Flights</p></div>
-                <div class="tab" data-category="hotels"><img src="Photos/Hotels.png" alt="Hotels"><p>Hotels</p></div>
-                <div class="tab" data-category="trains"><img src="Photos/Train.png" alt="Trains"><p>Trains</p></div>
-                <div class="tab" data-category="buses"><img src="/Photos/Bus.png" alt="Buses"><p>Buses</p></div>
-                <div class="tab" data-category="cars"><img src="/Photos/Car2.png" alt="Cars"><p>Cars</p></div>
-            </div>
-    
-            <div class="form-container active" data-category="flights">
-                <div class="form-group"><label>From</label><input type="text" placeholder="Departure city"></div>
-                <div class="form-group"><label>To</label><input type="text" placeholder="Destination city"></div>
-                <div class="form-group"><label>Departure</label><input type="date"></div>
-                <button class="btn-search">Search</button>
-            </div>
-            </div>
-
-        <footer>  
-            <div class="footer-container">  
-                <div class="footer-about">
-                    <div class="logo" style="color: #318CE7; font-size: 1.5rem; font-family: cursive; font-weight: 900;">HornbillGo</div>
-                    <div class="adress"><p>Singrijan, Dimapur,<br>Nagaland, India</p></div>  
-                    <div class="social-icons">  
-                        <i class="fa-brands fa-facebook"></i>  
-                        <i class="fa-brands fa-instagram"></i>  
-                        <i class="fa-brands fa-twitter"></i> 
-                        <i class="fa-brands fa-youtube"></i> 
-                    </div>  
-                </div>  
-                <div class="footer-links">
-                    <h3>Company</h3>
-                    <ul><li><a href="#">About Us</a></li><li><a href="#">FAQ</a></li><li><a href="#">Contact</a></li></ul>
-                </div>
-                <div class="footer-newsletter">  
-                    <h3>Newsletter</h3>  
-                    <p>Subscribe for exciting offers</p>
-                    <div class="enter-mail">
-                        <input type="email" placeholder="Email address">  
-                        <i class="fa-solid fa-paper-plane"></i>
-                    </div>  
-                </div> 
-            </div> 
-        </footer>
-
-        <div class="copyright-container">
-            <div class="copyright"><p>&copy; 2026 HornbillGo. All rights reserved.</p></div>
-        </div>
+  <!-- NAVBAR -->
+  <header class="d-header">
+    <a href="index.html" class="d-logo">HornbillGo</a>
+    <nav class="d-nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#explore-more">Explore</a>
+      <a href="index.html#book-ticket">Ticket</a>
+    </nav>
+    <div class="d-auth">
+      <a href="login.html" class="d-login">Login</a>
+      <a href="signup.html" class="d-signup">Sign up</a>
     </div>
-    
-    <script src="details.js"></script>
+  </header>
+
+  <!-- PAGE WRAPPER -->
+  <div class="page-wrap">
+
+    <!-- ─── CINEMATIC HERO ──────────────────────── -->
+    <section class="bento-hero" aria-label="Destination Hero">
+      <div class="hero-img-wrap">
+        <img id="destination-img" alt="Destination Photo" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-text-group">
+          <nav class="hero-breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="bc-sep">›</span>
+            <a href="index.html">Destinations</a>
+            <span class="bc-sep">›</span>
+            <span id="bc-name">Destination</span>
+          </nav>
+          <h1 id="destination-name" class="hero-title"></h1>
+          <div class="hero-location-row">
+            <span id="destination-location" class="hero-location-text"></span>
+          </div>
+        </div>
+        <div class="hero-stats-card">
+          <div class="hero-price-wrap">
+            <div class="hero-price-eyebrow">Starting from</div>
+            <div id="destination-price" class="hero-price"></div>
+          </div>
+          <div id="destination-rating" class="hero-rating-val"></div>
+          <a href="#booking" class="btn-book-now">Explore Packages →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── TRUST STRIP ──────────────────────────── -->
+    <div class="trust-strip">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        <span>Verified Packages</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+        <span>24/7 Support</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+        <span>Best Price Guarantee</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span>Flexible Booking</span>
+      </div>
+    </div>
+
+    <!-- ─── WEATHER BENTO BLOCK ──────────────────── -->
+    <section class="bento-weather" aria-label="Climate & Weather Container">
+      <div class="weather-header">
+        <div class="weather-title-group">
+          <h2 class="weather-title" id="weather-city-name"></h2>
+          <div class="best-time-pill">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:.85rem;height:.85rem;vertical-align:middle;margin-right:.3rem"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg>
+            Best time to visit <strong id="best-time-text">October – March</strong>
+          </div>
+        </div>
+        <!-- Live weather card — populated by JS -->
+        <div class="live-weather-card" id="live-weather">
+          <div class="lw-loading">
+            <span class="lw-spinner"></span> Fetching live weather…
+          </div>
+        </div>
+      </div>
+      <!-- Month grid — populated by JS with real historical averages -->
+      <div class="month-grid" id="month-grid">
+        <!-- JS will render 12 month cards here -->
+      </div>
+    </section>
+
+    <!-- ─── LOCAL FLAVORS ────────────────────────── -->
+    <section class="info-section" aria-label="Local Flavors">
+      <div class="section-heading">
+        <span class="section-pill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:.8rem;height:.8rem;vertical-align:middle;margin-right:.3rem"><path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-4.5-6.72-5-7.52-5-4.78 0-7.52 2.5-7.52 5H16.03z"/></svg> Taste the Region</span>
+        <h2 class="section-title">Local Flavors &amp; Eateries</h2>
+        <p class="section-sub">Handpicked local dishes and recommended eateries around <span id="flavors-dest-name">your destination</span>.</p>
+      </div>
+      <div class="card-row" id="food-card-row"></div>
+    </section>
+
+    <!-- ─── STAY IN COMFORT ──────────────────────── -->
+    <section class="info-section" aria-label="Stay in Comfort">
+      <div class="section-heading">
+        <span class="section-pill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:.8rem;height:.8rem;vertical-align:middle;margin-right:.3rem"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg> Handpicked Stays</span>
+        <h2 class="section-title">Stay in Comfort</h2>
+        <p class="section-sub">Carefully selected stays from cosy homestays to luxury resorts.</p>
+      </div>
+      <div class="card-row" id="hotel-card-row"></div>
+    </section>
+
+    <!-- ─── BOOKING WIDGET ───────────────────────── -->
+    <section class="bento-booking" id="booking" aria-label="Book a trip">
+      <div class="booking-header">
+        <h2 id="booking-dest-name"></h2>
+      </div>
+      <div class="tab-header">
+        <div class="tab active" data-category="flights"><img src="/Photos/Plane.png" alt="Flights"><p>Flights</p></div>
+        <div class="tab" data-category="hotels"><img src="/Photos/Hotels.png" alt="Hotels"><p>Hotels</p></div>
+        <div class="tab" data-category="trains"><img src="/Photos/Train.png" alt="Trains"><p>Trains</p></div>
+        <div class="tab" data-category="buses"><img src="/Photos/Bus.png" alt="Buses"><p>Buses</p></div>
+        <div class="tab" data-category="cars"><img src="/Photos/Car2.png" alt="Cars"><p>Cars</p></div>
+      </div>
+      <div class="form-container active" data-category="flights">
+        <div class="form-group"><label>From</label><input type="text" placeholder="Departure city"></div>
+        <div class="form-group"><label>To</label><input type="text" placeholder="Destination city"></div>
+        <div class="form-group"><label>Departure</label><input type="date"></div>
+        <button class="btn-search">Search</button>
+      </div>
+    </section>
+
+    <!-- ─── FOOTER ───────────────────────────────── -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-about">
+          <a href="index.html" class="footer-logo">HornbillGo</a>
+          <div class="adress"><p>Singrijan, Dimapur,<br>Nagaland, India</p></div>
+          <div class="social-icons">
+            <a href="#" class="social-icon-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Subscribe for exciting offers</p>
+          <div class="enter-mail">
+            <input type="email" placeholder="Email address">
+            <button type="button" class="newsletter-btn" aria-label="Subscribe">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:.95rem;height:.95rem"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright-container">
+      <p>&copy; 2026 HornbillGo. All rights reserved.</p>
+    </div>
+
+  </div><!-- /page-wrap -->
+
+  <script src="data.js"></script>
+  <script src="details.js"></script>
+  <script>
+    // Booking widget — "coming soon" toast
+    document.querySelectorAll('.btn-search').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const toast = document.getElementById('booking-toast');
+        if (!toast) return;
+        toast.removeAttribute('hidden');
+        clearTimeout(toast._t);
+        toast._t = setTimeout(() => toast.setAttribute('hidden', ''), 3000);
+      });
+    });
+  </script>
+  <div id="booking-toast" class="booking-toast" hidden role="status" aria-live="polite">Live booking engine launching soon — stay tuned!</div>
 </body>
 </html>
